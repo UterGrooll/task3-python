@@ -1,13 +1,17 @@
-i = 3
-while i < 15:
+try:
 
-    i += 1
-    if i % 5 == 0:
-        print(i)
-        continue
-    elif i % 10 == 0:
-        break
-    else:
-        i += 5
+    [i ** 3 for i in range(5)].append([i ** 2 for i in range(5, 10)])
+
+    print(1)
+
+except Exception as e:
+
+    print(2)
+
 else:
-    print(i)
+
+    print(3)
+
+finally:
+
+    print(4)
