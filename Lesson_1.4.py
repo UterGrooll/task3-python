@@ -5,7 +5,6 @@ while True:
     if user_input.lower() == "exit":
         print("Выход из программы...")
         break
-
     if user_input.lstrip('-').isdigit():
         number = user_input.lstrip('-')
         print(f"В этом числе {len(number)} цифры.")
