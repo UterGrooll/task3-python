@@ -1,12 +1,19 @@
-user_input = input("Введите число: ")
+def is_even(n):
+    return n % 2 == 0
 
-if user_input.isdigit():
+def get_positive_integer():
+    while True:
+        user_input = input("Введите целое положительное число: ")
+        if not user_input.isdigit():
+            print("Ошибка: введите целое положительное число.")
+        elif int(user_input) <= 0:
+            print("Ошибка: число должно быть больше нуля.")
+        else:
+            return int(user_input)
 
-    number = int(user_input)
-
-    if number % 2 == 0:
-        print(f"Число {number} является четным")
-    else:
-        print(f"Число {number} не является четным")
+print("Проверка числа на чётность")
+num = get_positive_integer()
+if is_even(num):
+    print(f"Число {num} является чётным")
 else:
-    print("Ошибка: введено не число")
+    print(f"Число {num} не является чётным")
