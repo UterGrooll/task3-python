@@ -1,11 +1,11 @@
-print("Форматирование строк")
-first_name = input("Введите имя: ")
-last_name = input("Введите фамилию: ")
-age = input("Ваш Возраст: ")
+name = input("Как вас зовут? ")
+surname = input("А фамилия? ")
+years_old = input("Сколько вам лет? ")
 
-output_format = "Ваше имя: {}, Фамилия: {}, Возраст: {} лет".format(first_name, last_name, age)
-print("\nРеализация через format:")
-print(output_format)
-output_fstring = f"Ваше имя: {first_name}, Фамилия: {last_name}, Возраст: {age} лет"
-print("\nРеализация через f-string:")
-print(output_fstring)
+formatted_str = "Ваше имя: {0}, Фамилия: {1}, Возраст: {2} лет.".format(name, surname, years_old)
+print("\n[Метод .format()]")
+print(formatted_str)
+
+f_str = f"Ваше имя: {name}, Фамилия: {surname}, Возраст: {years_old} лет."
+print("\n[f-string]")
+print(f_str)
